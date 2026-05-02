@@ -1,16 +1,18 @@
-import { createRenderer } from "./scene/renderer";
-import { createScene } from "./scene/scene";
-import { createCameras } from "./scene/camera";
+import { createRenderer } from "./scene/renderer.js";
+import { createScene } from "./scene/scene.js";
+import { createCameras } from "./scene/camera.js";
 
 import * as THREE from 'three';
 
-async function init() {
+function init() {
     const renderer = createRenderer();
     document.body.appendChild(renderer.domElement);
 
     const scene = createScene();
 
-    const {camera1, camera2} = createCameras();
+    const {camera1} = createCameras();
 
     renderer.render(scene, camera1);
 }   
+
+init();
