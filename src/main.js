@@ -7,7 +7,7 @@ import { createJupiter } from "./objects/jupiter.js";
 
 import * as THREE from 'three';
 
-function init() {
+async function init() {
     const renderer = createRenderer();
     document.body.appendChild(renderer.domElement);
 
@@ -17,7 +17,7 @@ function init() {
 
     const {camera1} = createCameras();
 
-    const {mesh: jupiter} = createJupiter();
+    const {mesh: jupiter} = await createJupiter();
     scene.add(jupiter);
 
     renderer.render(scene, camera1);

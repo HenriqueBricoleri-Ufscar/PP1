@@ -1,5 +1,6 @@
 import * as THREE from 'three'
 
+//Adiciona a luz ambiente e uma luz simulada do sol, tomado como posicao fixa
 export function addLights(scene){
     const ambientLight = new THREE.AmbientLight(0x0d1a33, 0.8);
     scene.add(ambientLight);

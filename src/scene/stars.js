@@ -1,5 +1,6 @@
 import * as THREE from 'three'
 
+//Adiciona objetos do tipo ponto para simular estrelas, valores totalmente empíricos
 export function addStarField(scene){
     const count = 6000;
     const pos = new Float32Array(count * 3);
