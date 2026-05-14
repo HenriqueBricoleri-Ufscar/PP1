@@ -59,12 +59,12 @@ async function init() {
         io.position.z = Math.sin(angle * 0.8) * 6;
         io.rotation.y += 0.008;
 
-        callisto.position.x = Math.cos(angle * 0.6) * 8; 
-        callisto.position.z = Math.sin(angle * 0.6) * 8;
+        callisto.position.x = Math.cos(angle * 0.6) * 10; 
+        callisto.position.z = Math.sin(angle * 0.6) * 10;
         callisto.rotation.y += 0.003;
 
-        ganimedes.position.x = Math.cos(angle * 0.4) * 10; 
-        ganimedes.position.z = Math.sin(angle * 0.4) * 10;
+        ganimedes.position.x = Math.cos(angle * 0.4) * 8; 
+        ganimedes.position.z = Math.sin(angle * 0.4) * 8;
         ganimedes.rotation.y += 0.002;
 
         jupiter.rotation.y += 0.002;
