@@ -5,7 +5,7 @@ export function createGanimedes() {
     const textureLoader = new THREE.TextureLoader();
     const texture = textureLoader.load(ganimedesImg);
 
-    const geometry = new THREE.SphereGeometry(0.6, 32, 32);
+    const geometry = new THREE.SphereGeometry(0.55, 32, 32);
 
     const material = new THREE.MeshStandardMaterial({
         map: texture,
@@ -13,7 +13,7 @@ export function createGanimedes() {
      });
 
      const mesh = new THREE.Mesh(geometry, material);
-        mesh.position.set(10, 0, 0);
+        mesh.position.set(12, 0.2, 0);
 
         return mesh;
 }

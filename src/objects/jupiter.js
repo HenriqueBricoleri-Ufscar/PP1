@@ -14,7 +14,7 @@ export async function createJupiter(){
         loadShader('../shaders/jupiter.frag.glsl')
     ]);
 
-    const jupiterGeo = new THREE.SphereGeometry(2, 128, 64);
+    const jupiterGeo = new THREE.SphereGeometry(5, 128, 64);
     const uniforms = {
         time: {value: 0.0},
         sunDir: {value: new THREE.Vector3(10, 5, 5).normalize()}

@@ -6,7 +6,7 @@ export function createEuropa() {
     
     const texture = textureLoader.load(europaImg); 
 
-    const geometry = new THREE.SphereGeometry(0.4, 32, 32); 
+    const geometry = new THREE.SphereGeometry(0.35, 32, 32); 
     
     const material = new THREE.MeshStandardMaterial({
         map: texture,
@@ -14,8 +14,8 @@ export function createEuropa() {
     });
 
     const mesh = new THREE.Mesh(geometry, material);
-    
-    mesh.position.set(4, 0, 0); 
+
+    mesh.position.set(6, -0.5, 0);
 
     return mesh;
 }

@@ -11,9 +11,6 @@ import { createGanimedes } from "./objects/ganimedes.js";
 import { createEarth } from "./objects/earth.js";
 import { createMarte } from "./objects/marte.js";
 
-import * as THREE from 'three';
-import { call } from "three/src/nodes/code/FunctionCallNode.js";
-
 async function init() {
     const renderer = createRenderer();
     document.body.appendChild(renderer.domElement);
@@ -35,17 +32,19 @@ async function init() {
     const {mesh: jupiter} = await createJupiter();
     scene.add(jupiter);
     
+    
+    const io = createIo();
+    scene.add(io);
+    
     const europa = createEuropa();
     scene.add(europa);
 
-    const io = createIo();
-    scene.add(io);
-
+    const ganimedes = createGanimedes();
+    scene.add(ganimedes);
+    
     const callisto = createCallisto();
     scene.add(callisto);
 
-    const ganimedes = createGanimedes();
-    scene.add(ganimedes);
 
     const earth = createEarth();
     scene.add(earth);
@@ -59,23 +58,23 @@ async function init() {
         requestAnimationFrame(animate);
 
         angle += 0.01;
-        europa.position.x = Math.cos(angle) * 4; 
-        europa.position.z = Math.sin(angle) * 4;
-        europa.rotation.y += 0.005;
+        europa.position.x = Math.cos(angle) * 8; 
+        europa.position.z = Math.sin(angle) * 8;
+        europa.rotation.y += 0.01;
 
         io.position.x = Math.cos(angle * 0.8) * 6; 
         io.position.z = Math.sin(angle * 0.8) * 6;
         io.rotation.y += 0.008;
 
-        callisto.position.x = Math.cos(angle * 0.6) * 10; 
-        callisto.position.z = Math.sin(angle * 0.6) * 10;
-        callisto.rotation.y += 0.003;
+        callisto.position.x = Math.cos(angle * 0.4) * 12; 
+        callisto.position.z = Math.sin(angle * 0.4) * 12;
+        callisto.rotation.y += 0.004;
 
-        ganimedes.position.x = Math.cos(angle * 0.4) * 8; 
-        ganimedes.position.z = Math.sin(angle * 0.4) * 8;
-        ganimedes.rotation.y += 0.002;
+        ganimedes.position.x = Math.cos(angle * 0.4) * 10; 
+        ganimedes.position.z = Math.sin(angle * 0.4) * 10;
+        ganimedes.rotation.y += 0.006;
 
-        jupiter.rotation.y += 0.002;
+        jupiter.rotation.y += 0.0025;
 
         earth.rotation.y += 0.001;
 
@@ -83,7 +82,7 @@ async function init() {
 
         renderer.render(scene, activeCamera);
     }
-
+    
     animate();
 }   
 
