@@ -5,6 +5,7 @@ import { addLights } from "./scene/light.js";
 import { addStarField } from "./scene/stars.js";
 import { createJupiter } from "./objects/jupiter.js";
 import { createEuropa } from "./objects/europa.js";
+import { createIo } from "./objects/io.js";
 
 import * as THREE from 'three';
 
@@ -16,14 +17,25 @@ async function init() {
     addLights(scene);
     addStarField(scene);
 
-    const {camera1} = createCameras();
-
+    const { camera1, camera2 } = createCameras();
     
+    // 2. Defina qual é a câmera ativa inicial
+    let activeCamera = camera1;
+
+    window.addEventListener('keydown', (event) => {
+        if (event.key.toLowerCase() === 'c') {
+            activeCamera = (activeCamera === camera1) ? camera2 : camera1;
+        }
+    });
+
     const {mesh: jupiter} = await createJupiter();
     scene.add(jupiter);
     
     const europa = createEuropa();
     scene.add(europa);
+
+    const io = createIo();
+    scene.add(io);
 
     let angle = 0;
     
@@ -33,16 +45,18 @@ async function init() {
         angle += 0.01;
         europa.position.x = Math.cos(angle) * 4; 
         europa.position.z = Math.sin(angle) * 4;
-        
         europa.rotation.y += 0.005;
+
+        io.position.x = Math.cos(angle * 0.8) * 6; 
+        io.position.z = Math.sin(angle * 0.8) * 6;
+        io.rotation.y += 0.008;
+
         jupiter.rotation.y += 0.002;
 
-        renderer.render(scene, camera1);
+        renderer.render(scene, activeCamera);
     }
 
-    animate()
-
-    renderer.render(scene, camera1);
+    animate();
 }   
 
 init();
