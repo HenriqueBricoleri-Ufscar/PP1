@@ -79,7 +79,7 @@ async function init() {
 
         earth.rotation.y += 0.001;
 
-        marte.rotation.y += 0.003;
+        marte.rotation.y += 0.0015;
 
         renderer.render(scene, activeCamera);
     }

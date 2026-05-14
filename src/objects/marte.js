@@ -4,7 +4,7 @@ import marteImg from '../assets/marte.png';
 export function createMarte() {
     const textureLoader = new THREE.TextureLoader();
     const texture = textureLoader.load(marteImg); 
-    const geometry = new THREE.SphereGeometry(0.55, 32, 32); 
+    const geometry = new THREE.SphereGeometry(0.4, 32, 32); 
     
     const material = new THREE.MeshStandardMaterial({
         map: texture,
@@ -13,7 +13,7 @@ export function createMarte() {
 
     const mesh = new THREE.Mesh(geometry, material);
     
-    mesh.position.set(15, 0, -20); 
+    mesh.position.set(12, 0, -17); 
 
     return mesh;
 }
