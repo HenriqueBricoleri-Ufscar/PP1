@@ -2,7 +2,7 @@ import * as THREE from 'three'
 
 //Adiciona objetos do tipo ponto para simular estrelas, valores totalmente empíricos
 export function addStarField(scene){
-    const count = 6000;
+    const count = 8000;
     const pos = new Float32Array(count * 3);
     const size = new Float32Array(count);
 
@@ -24,10 +24,10 @@ export function addStarField(scene){
 
     const text = new THREE.PointsMaterial({
         color: 0xffffff,
-        size: 0.2,
+        size: 0.3,
         sizeAttenuation: true,
-        transparent: true,
-        opacity: 0.9
+        transparent: false,
+        opacity: 1
     });
 
     scene.add(new THREE.Points(geo, text));

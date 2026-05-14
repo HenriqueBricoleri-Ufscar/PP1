@@ -4,7 +4,7 @@ import earthImg from '../assets/earth.png';
 export function createEarth() {
     const textureLoader = new THREE.TextureLoader();
     const texture = textureLoader.load(earthImg); 
-    const geometry = new THREE.SphereGeometry(0.55, 32, 32); 
+    const geometry = new THREE.SphereGeometry(0.4, 32, 32); 
     
     const material = new THREE.MeshStandardMaterial({
         map: texture,
@@ -13,7 +13,7 @@ export function createEarth() {
 
     const mesh = new THREE.Mesh(geometry, material);
     
-    mesh.position.set(25, 0, -30); 
+    mesh.position.set(23, 0, -40); 
 
     return mesh;
 }

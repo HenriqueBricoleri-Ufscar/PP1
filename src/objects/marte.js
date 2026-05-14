@@ -4,7 +4,7 @@ import marteImg from '../assets/marte.png';
 export function createMarte() {
     const textureLoader = new THREE.TextureLoader();
     const texture = textureLoader.load(marteImg); 
-    const geometry = new THREE.SphereGeometry(0.4, 32, 32); 
+    const geometry = new THREE.SphereGeometry(0.2, 32, 32); 
     
     const material = new THREE.MeshStandardMaterial({
         map: texture,
