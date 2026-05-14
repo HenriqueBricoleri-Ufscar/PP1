@@ -63,6 +63,10 @@ async function init() {
         callisto.position.z = Math.sin(angle * 0.6) * 8;
         callisto.rotation.y += 0.003;
 
+        ganimedes.position.x = Math.cos(angle * 0.4) * 10; 
+        ganimedes.position.z = Math.sin(angle * 0.4) * 10;
+        ganimedes.rotation.y += 0.002;
+
         jupiter.rotation.y += 0.002;
 
         renderer.render(scene, activeCamera);
