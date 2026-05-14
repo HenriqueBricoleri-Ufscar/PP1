@@ -6,8 +6,10 @@ import { addStarField } from "./scene/stars.js";
 import { createJupiter } from "./objects/jupiter.js";
 import { createEuropa } from "./objects/europa.js";
 import { createIo } from "./objects/io.js";
+import { createCallisto } from "./objects/callisto.js";
 
 import * as THREE from 'three';
+import { call } from "three/src/nodes/code/FunctionCallNode.js";
 
 async function init() {
     const renderer = createRenderer();
@@ -37,6 +39,9 @@ async function init() {
     const io = createIo();
     scene.add(io);
 
+    const callisto = createCallisto();
+    scene.add(callisto);
+
     let angle = 0;
     
     function animate() {
@@ -50,6 +55,10 @@ async function init() {
         io.position.x = Math.cos(angle * 0.8) * 6; 
         io.position.z = Math.sin(angle * 0.8) * 6;
         io.rotation.y += 0.008;
+
+        callisto.position.x = Math.cos(angle * 0.6) * 8; 
+        callisto.position.z = Math.sin(angle * 0.6) * 8;
+        callisto.rotation.y += 0.003;
 
         jupiter.rotation.y += 0.002;
 
