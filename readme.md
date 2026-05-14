@@ -7,17 +7,22 @@
 
 ## Instalação e execução (Vite + Node + Three.js)
 
-> Requisitos: **Node.js (>= 18)** e **npm**
+> Requisitos: **Node.js (>= 20)** e **npm**
 
 ```bash
-# 1) Clone o repositório
+# 1) Verifique se a versão do node é superior à 20
+node -v
+
+# 2) Clone o repositório
 git clone https://github.com/HenriqueBricoleri-Ufscar/PP1.git
 cd PP1
 
-# 2) Instale as dependências
-npm install
+# 3) Instale as dependências
+npm init -y
+npm install three
+npm install --save-dev vite
 
-# 3) Execute em modo desenvolvimento
+# 4) Execute em modo desenvolvimento
 npm run dev
 ```
 
