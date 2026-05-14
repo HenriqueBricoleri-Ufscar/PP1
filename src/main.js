@@ -21,7 +21,6 @@ async function init() {
 
     const { camera1, camera2 } = createCameras();
     
-    // 2. Defina qual é a câmera ativa inicial
     let activeCamera = camera1;
 
     window.addEventListener('keydown', (event) => {
