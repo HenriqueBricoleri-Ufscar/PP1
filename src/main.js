@@ -8,6 +8,7 @@ import { createEuropa } from "./objects/europa.js";
 import { createIo } from "./objects/io.js";
 import { createCallisto } from "./objects/callisto.js";
 import { createGanimedes } from "./objects/ganimedes.js";
+import { createEarth } from "./objects/earth.js";
 
 import * as THREE from 'three';
 import { call } from "three/src/nodes/code/FunctionCallNode.js";
@@ -45,6 +46,9 @@ async function init() {
     const ganimedes = createGanimedes();
     scene.add(ganimedes);
 
+    const earth = createEarth();
+    scene.add(earth);
+
     let angle = 0;
     
     function animate() {
@@ -68,6 +72,8 @@ async function init() {
         ganimedes.rotation.y += 0.002;
 
         jupiter.rotation.y += 0.002;
+
+        earth.rotation.y += 0.001;
 
         renderer.render(scene, activeCamera);
     }
