@@ -7,6 +7,7 @@ import { createJupiter } from "./objects/jupiter.js";
 import { createEuropa } from "./objects/europa.js";
 import { createIo } from "./objects/io.js";
 import { createCallisto } from "./objects/callisto.js";
+import { createGanimedes } from "./objects/ganimedes.js";
 
 import * as THREE from 'three';
 import { call } from "three/src/nodes/code/FunctionCallNode.js";
@@ -40,6 +41,9 @@ async function init() {
 
     const callisto = createCallisto();
     scene.add(callisto);
+
+    const ganimedes = createGanimedes();
+    scene.add(ganimedes);
 
     let angle = 0;
     
