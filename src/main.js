@@ -9,6 +9,7 @@ import { createIo } from "./objects/io.js";
 import { createCallisto } from "./objects/callisto.js";
 import { createGanimedes } from "./objects/ganimedes.js";
 import { createEarth } from "./objects/earth.js";
+import { createMarte } from "./objects/marte.js";
 
 import * as THREE from 'three';
 import { call } from "three/src/nodes/code/FunctionCallNode.js";
@@ -49,6 +50,9 @@ async function init() {
     const earth = createEarth();
     scene.add(earth);
 
+    const marte = createMarte();
+    scene.add(marte);
+
     let angle = 0;
     
     function animate() {
@@ -74,6 +78,8 @@ async function init() {
         jupiter.rotation.y += 0.002;
 
         earth.rotation.y += 0.001;
+
+        marte.rotation.y += 0.003;
 
         renderer.render(scene, activeCamera);
     }
