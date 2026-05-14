@@ -77,11 +77,11 @@ Este README descreve as **especificações atendidas**, **modo de interação** 
 - **Jean Lucas**
   - Lua Europa com textura e órbita
   - Lua Io com textura vulcânica
-  - Sistema de **troca de câmeras**
+  - Sistema de troca de câmeras
 
 - **Fernando Aoki**
   - Lua Ganimedes (geometria, textura, rotação/órbita)
-  - Textura de Marte
+  - Marte adicionada com rotação
   - Ajustes de posição em luas (Calisto e Ganimedes)
 
 - **Thiago Kraide**

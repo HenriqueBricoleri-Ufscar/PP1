@@ -15,3 +15,29 @@ body{
 canvas{
     display: block;
 }
+
+#hud {
+  position: absolute;
+  top: 20px; left: 20px;
+  color: #d4a96a;
+  background: rgba(5, 10, 25, 0.78);
+  padding: 14px 18px;
+  border-radius: 8px;
+  border: 1px solid rgba(212, 169, 106, 0.35);
+  font-size: 12px;
+  line-height: 2;
+  letter-spacing: 0.04em;
+  backdrop-filter: blur(6px);
+}
+
+
+#hud p {
+  display: inline-block;
+  background: rgba(212,169,106,0.18);
+  border: 1px solid rgba(212,169,106,0.4);
+  border-radius: 4px;
+  padding: 1px 7px;
+  font-family: 'Share Tech Mono', monospace;
+  font-size: 11px;
+  color: #f0c070;
+}
