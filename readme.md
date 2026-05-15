@@ -73,18 +73,18 @@ Este README descreve as **especificações atendidas**, **modo de interação** 
 
 ## Integrantes e contribuições
 
-- **Henrique Bricoleri**
+- **Henrique Bricoleri 834258**
   - Setup inicial do projeto, render/scene/câmeras base
   - Light e conceito inicial do planeta principal (shader)
   - Textura de Júpiter e estrelas no fundo
   - Ajustes e correções finais
 
-- **Jean Lucas**
+- **Jean Lucas 823597**
   - Lua Europa com textura e órbita
   - Lua Io com textura vulcânica
   - Sistema de troca de câmeras
 
-- **Fernando Aoki**
+- **Fernando Aoki 823606**
   - Lua Ganimedes (geometria, textura, rotação/órbita)
   - Marte adicionada com rotação
   - Ajustes de posição em luas (Calisto e Ganimedes)
