@@ -89,7 +89,7 @@ Este README descreve as **especificações atendidas**, **modo de interação** 
   - Marte adicionada com rotação
   - Ajustes de posição em luas (Calisto e Ganimedes)
 
-- **Thiago Kraide**
+- **Thiago Kraide 792244**
   - Script e textura da Terra
   - Terra adicionada com rotação
   - Ajustes de posição/escala/rotação da Terra e Marte
